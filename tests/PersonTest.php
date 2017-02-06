@@ -20,9 +20,11 @@ final class PersonTest extends TestCase
 
 	public function testPerson() {
 
-		$this->PersonInstance->setFname('Rosel');
-		$this->PersonInstance->setLname('Roa');
-		$this->assertEquals('Rosel Roa', $this->PersonInstance->fullName());
+		$fname='Rosel'
+		$lname='Roa'
+		$this->PersonInstance->setFname($fname);
+		$this->PersonInstance->setLname($lname);
+		$this->assertEquals($fname.$lname,$this->PersonInstance->fullName());
 	}
 }
 
