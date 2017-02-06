@@ -20,8 +20,8 @@ final class PersonTest extends TestCase
 
 	public function testPerson() {
 
-		$fname='Rosel';
-		$lname='Roa';
+		$fname='FirstName';
+		$lname='LastName';
 		$fullname=$fname.$lname;
 		$this->PersonInstance->setFname($fname);
 		$this->PersonInstance->setLname($lname);
