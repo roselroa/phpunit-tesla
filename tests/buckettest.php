@@ -1,23 +1,30 @@
 <?php
+declare(strict_types=1);
 
-require 'bucket.php';
+use PHPUnit\Framework\TestCase;
+require 'Bucket.php';
 
-class buckettest extends PHPUnit_Framework_TestCase
+final class BucketTest extends TestCase
 {
-	public $bucketInstance;
+	public $BucketInstance;
 
 	public function setUp()
 	{
-		$this->bucketInstance=new bucket();
+		$this->BucketInstance=new Bucket();
 	}
 
-	public function testballs() {
+	public function tearDown()
+	{
+		unset($this->instance);
+	}
 
-		$this->bucketInstance->setBalls(100);
+	public function testBalls() {
 
-		$this->bucketInstance->eatBalls();
+		$this->BucketInstance->setBalls(100);
 
-		$this->assertEquals(99, $this->bucketInstance->getBalls());
+		$this->BucketInstance->eatBalls();
+
+		$this->assertEquals(99, $this->BucketInstance->getBalls());
 	}
 }
 

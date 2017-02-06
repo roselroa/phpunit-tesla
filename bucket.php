@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
-class bucket {
+class Bucket {
 
-	private balls;
+	private $balls;
 
 	public function getBalls() {
-		return $this->getBalls;
+		return $this->balls;
 	}
 
 	public function setBalls($count) {
