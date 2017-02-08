@@ -23,7 +23,7 @@ final class BucketTest extends TestCase
 
 		$this->BucketInstance->eatBalls();
 
-		$this->assertEquals(99, $this->BucketInstance->getBalls());
+		$this->assertEquals(98, $this->BucketInstance->getBalls());
 	}
 }
 
