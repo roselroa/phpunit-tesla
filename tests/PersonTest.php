@@ -21,7 +21,7 @@ final class PersonTest extends TestCase
 
 		$fname='FirstName';
 		$lname='LastName';
-		$fullname=$fname.$lname.'error';
+		$fullname=$fname.$lname;
 		$this->PersonInstance->setFname($fname);
 		$this->PersonInstance->setLname($lname);
 		$this->assertEquals($fullname,$this->PersonInstance->fullName());
